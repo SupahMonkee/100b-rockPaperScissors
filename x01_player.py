@@ -14,17 +14,28 @@ rock
 
 Output: 0
 """
-
+import os
 def playerChoice():
-  '''
-  No input parameters needed.
-  Function should ask the players to make their choice.  How you ask is unimportant, but the
-  output must be consistent:
-  0: rock
-  1: paper
-  2: scissors
-  '''
-  return value
+  answered = 0
+  while answered == 0:
+    print('Please make your choice of "Rock", "Paper", or "Scissors".')
+    rpsp = input()
+    if "rock" in rpsp or "Rock" in rpsp:
+      print("You picked Rock.")
+      pchoice = 0
+      answered = 1
+    elif "paper" in rpsp or "Paper" in rpsp:
+      print("You picked Paper.")
+      pchoice = 1
+      answered = 1
+    elif "scissors" in rpsp or "Scissors" in rpsp:
+      print("You picked Scissors.")
+      pchoice = 2
+      answered = 1
+    else:
+      os.system('cls')
+      print('You didn\'t select an option.')
+  return pchoice
 
 
 if __name__ == "__main__":

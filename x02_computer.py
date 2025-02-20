@@ -8,13 +8,10 @@ output:
 1 : paper
 2 : scissors
 """
-
+import random
 def computerChoice():
-  
-  
-  
-  
-  return value
+  cchoice = random.randrange(0,3)
+  return cchoice
 
 
 if __name__ == "__main__":
